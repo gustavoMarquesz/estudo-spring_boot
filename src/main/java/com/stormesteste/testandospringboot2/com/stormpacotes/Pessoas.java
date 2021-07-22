@@ -12,9 +12,7 @@ public class Pessoas implements Serializable {
     private String email;
     private String nascimento;
 
-    public Pessoas(){
 
-    }
 
     public Pessoas(Integer id, String nome, String email, String nascimento) {
         super();
@@ -22,6 +20,10 @@ public class Pessoas implements Serializable {
         this.nome = nome;
         this.email = email;
         this.nascimento = nascimento;
+    }
+
+    public Pessoas(){
+
     }
 
     public Integer getId() {
