@@ -1,17 +1,24 @@
 package com.stormesteste.testandospringboot2.com.stormpacotes;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
+
+@Entity //Indicar que essa classe é uma entidade do JPA
 public class Pessoas implements Serializable {
     private final long serialVersionUGI = 1L;
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Deixar o banco de dados escolher a Primery key
     private Integer id;
+
     private String nome;
     private String email;
     private String nascimento;
-
 
 
     public Pessoas(Integer id, String nome, String email, String nascimento) {
@@ -22,7 +29,7 @@ public class Pessoas implements Serializable {
         this.nascimento = nascimento;
     }
 
-    public Pessoas(){
+    public Pessoas() {
 
     }
 
@@ -58,20 +65,19 @@ public class Pessoas implements Serializable {
         this.nascimento = nascimento;
     }
 
-    public long getSerialVersionUGI() {
-        return serialVersionUGI;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pessoas pessoas = (Pessoas) o;
-        return serialVersionUGI == pessoas.serialVersionUGI && id.equals(pessoas.id) && nome.equals(pessoas.nome) && email.equals(pessoas.email) && nascimento.equals(pessoas.nascimento);
+        return id.equals(pessoas.id) && nome.equals(pessoas.nome) && email.equals(pessoas.email) && nascimento.equals(pessoas.nascimento);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(serialVersionUGI, id, nome, email, nascimento);
+        return Objects.hash(id, nome, email, nascimento);
     }
 }
+
+
+
