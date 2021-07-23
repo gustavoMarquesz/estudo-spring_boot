@@ -1,6 +1,7 @@
 package com.stormesteste.testandospringboot2;
 
-import com.stormesteste.testandospringboot2.domain.Pessoa;
+
+import com.stormesteste.testandospringboot2.domain.Cota;
 import com.stormesteste.testandospringboot2.repositories.ConnetionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -10,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class TestandoSpringboot2Application implements CommandLineRunner {
+public class TestandoSpringboot2Application implements CommandLineRunner {//command gerou o metodo abaixo
 	@Autowired
-	ConnetionRepository connetionRepository;
+	ConnetionRepository connetionRepository;//chamei o repository para fazer a conexao
 
 
 
@@ -22,11 +23,17 @@ public class TestandoSpringboot2Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Pessoa p1 = new Pessoa(null,"Gustavo","gustavo99a@hotmail.com");
-		Pessoa p2 = new Pessoa(null,"Gustavo","gustavo99a@hotmail.com");
 
-		connetionRepository.saveAll(Arrays.asList(p1,p2));
+		Cota c1 = new Cota(null,"Gustavo","gustavo99a@hotmail.com",
+				"Churras","Asinha, Coxinha");
+		
+		Cota c2 = new Cota(null,"Guga","guga10@hotmail.com",
+				"Coxinha","Coxinha, coca");
+
+		connetionRepository.saveAll(Arrays.asList(c1,c2));
+
 
 
 	}
+
 }

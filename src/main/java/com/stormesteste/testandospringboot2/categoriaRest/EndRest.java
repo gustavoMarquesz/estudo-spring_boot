@@ -1,7 +1,7 @@
 package com.stormesteste.testandospringboot2.categoriaRest;
 
 
-import com.stormesteste.testandospringboot2.domain.Pessoa;
+import com.stormesteste.testandospringboot2.domain.Cota;
 import com.stormesteste.testandospringboot2.servicos.Buscar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class EndRest {
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResponseEntity<?> achar(@PathVariable Integer id){
-        Pessoa obj = executar.find(id);
+        Cota obj = executar.find(id);
         return ResponseEntity.ok().body(obj);
     }
 

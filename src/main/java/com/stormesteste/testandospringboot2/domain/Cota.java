@@ -12,18 +12,20 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Data
 
-public class Pessoa implements Serializable {
+public class Cota implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String nome;
+    private String nomePessosa;
     private String email;
+    private String nomeCota;
+    private String itensCota;
 
 }
