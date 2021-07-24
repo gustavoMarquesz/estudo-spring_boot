@@ -1,17 +1,16 @@
-package com.stormesteste.testandospringboot2;
+package com.stormesteste.testandospringboot2.controlers;
 
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = ("/"))
+
 public class IndexControler {
 
-
     public String index(){
-        return "Ok";
+        return "ok";
     }
-    
 
 }
