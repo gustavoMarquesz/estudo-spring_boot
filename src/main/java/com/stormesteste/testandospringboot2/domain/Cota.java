@@ -5,11 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -24,9 +22,9 @@ public class Cota implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String nomePessosa;
-    private String email;
+    private String nomePessoa;
     private String nomeCota;
-    private String itensCota;
+    private String dataCota;
+
 
 }
