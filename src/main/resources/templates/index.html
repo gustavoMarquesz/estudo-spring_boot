@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org"
-      xmlns:layout="http://wwwultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Cotinha Friends</title>
@@ -9,6 +9,17 @@
 
 <h1>Lista de cotas</h1>
 <h3><a href="/cadastro">Cadastro</a></h3>
+
+
+<div th:each="evento: ${eventos}">
+    <div class="row">
+        <p><span th:text="evento.nomeCota"></span></p>
+
+    </div>
+
+
+</div>
+
 
 
 </body>
