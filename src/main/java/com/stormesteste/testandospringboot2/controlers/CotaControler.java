@@ -27,6 +27,7 @@ public class CotaControler {
         return "redirect:/cadastro";
     }
 
+
     @RequestMapping(value = "/cotas")
     public ModelAndView lista(){
         ModelAndView mv = new ModelAndView("index");
@@ -34,5 +35,6 @@ public class CotaControler {
         mv.addObject("eventos",eventos);
         return mv;
     }
+
 
 }

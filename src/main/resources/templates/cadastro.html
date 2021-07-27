@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta charset="UTF-8">
+<title>Cotinha Friends</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <head>
     <meta charset="UTF-8">
     <title>cadastroDeCotas</title>
@@ -8,15 +17,18 @@
 <body>
 <h1>Cotinha friends</h1>
 
-<form method="post">
+<form class="container" method="post">
     Seu Nome: <input type="text" value="" name="nomePessoa">
     Nome da Cotinha: <input type="text"value="" name="nomeCota">
     Data de Entrega: <input type="date" value="" name="dataCota">
 
-    <button type="submit">Salvar!</button>
+    <button class="waves-effect waves-light btn" type="submit">Salvar!</button>
+
+
 
 </form>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 </body>
 </html>
